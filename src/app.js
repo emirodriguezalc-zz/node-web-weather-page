@@ -20,21 +20,21 @@ app.get('', (req, res) => {
   res.render('index',
     {
       title: 'Index',
-      name: 'Index name'
+      name: 'Emilia Rodriguez Gimenez'
     })
 })
 
 app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About',
-    name: 'suicidacion'
+    name: 'Emilia Rodriguez Gimenez'
   })
 })
 
 app.get('/help', (req, res) => {
   res.render('help', {
     title: 'Help',
-    name: 'realizare la matacion '
+    name: 'Emilia Rodriguez Gimenez'
   })
 })
 
