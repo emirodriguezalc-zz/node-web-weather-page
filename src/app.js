@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
+const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -13,6 +14,7 @@ const forecast = require('./utils/forecast');
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
 hbs.registerPartials(partialsPath)
+app.use(cors());
 
 app.use(express.static(path.join(__dirname, '../public')))
 
