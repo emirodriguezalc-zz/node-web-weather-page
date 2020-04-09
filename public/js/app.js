@@ -19,7 +19,7 @@ weatherForm.addEventListener('submit', (event) => {
         messageOne.textContent = 'There has been an error';
       } else {
         messageOne.textContent = location;
-        messageTwo.textContent = `It is currently ${data.temp} in ${location}. There is a ${data.rainProb}% chance of rain`;
+        messageTwo.textContent = `It is currently ${data.temp} in ${location}, the real feel is ${data.realFeel}. There is a ${data.rainProb}% chance of rain.`;
       }
     })
   })

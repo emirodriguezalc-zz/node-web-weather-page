@@ -13,6 +13,7 @@ const forecast = (lat, long, callback) => {
       callback(undefined, {
         temp: body.currently.temperature,
         rainProb: body.currently.precipProbability,
+        realFeel: body.currently.apparentTemperature,
       })
     }
   })

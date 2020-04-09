@@ -45,10 +45,11 @@ app.get('/weather', (req, res) => {
     })
   }
   geocode(req.query.address, (error, { latitude, longitude, location } = {}) => {
-    error ? res.send({ error }) : forecast(latitude, longitude, (error, { temp, rainProb } = {}) => {
+    error ? res.send({ error }) : forecast(latitude, longitude, (error, { temp, rainProb, realFeel } = {}) => {
       error ? res.send({ error }) : res.send({
         temp,
         rainProb,
+        realFeel,
         location,
         address: req.query.address
       })
